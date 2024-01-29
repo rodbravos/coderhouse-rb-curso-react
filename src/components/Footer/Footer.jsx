@@ -2,8 +2,8 @@ import CoderhouseLogo from "../../assets/coderhouse-logo.svg";
 
 const Footer = () => {
   return (
-    <div className="container-fluid fixed-bottom bg-dark">
-      <footer className="container py-3 my-4">
+    <div className="container-fluid bg-dark mt-5">
+      <footer className="container footer py-3 mt-4">
         <div className="text-center border-bottom pb-3 mb-3">
           <img
             src={CoderhouseLogo}
@@ -12,10 +12,10 @@ const Footer = () => {
             className="mx-auto"
           />
         </div>
-        <h4 className="text-center fw-bold text-light">
+        <h5 className="text-center fw-bold text-light">
           RODRIGO BRAVO - CURSO REACT JS
-        </h4>
-        <h5 className="text-center fw-bold text-light">PRIMERA ENTREGA</h5>
+        </h5>
+        <h6 className="text-center fw-bold text-light">SEGUNDA ENTREGA</h6>
       </footer>
     </div>
   );

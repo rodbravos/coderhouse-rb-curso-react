@@ -1,7 +1,17 @@
 import Logo from "../../assets/logo.svg";
+import { getCategoriesAsync } from "../../utils/MockData";
 import CartWidget from "../CartWidget/CartWidget";
+import { useEffect, useState } from "react";
 
 const NavBar = () => {
+  const [categories, setCategories] = useState([]);
+
+  useEffect(() => {
+    getCategoriesAsync().then((categories) => {
+      setCategories(categories);
+    });
+  }, []);
+
   return (
     <nav className="navbar navbar-expand-lg bg-dark sticky-top py-3">
       <div className="container">
@@ -12,7 +22,7 @@ const NavBar = () => {
             alt="logo"
             width="40"
           />
-          <span className="text-light fw-bold my-auto">RodPeliculas</span>
+          <span className="text-light fw-bold my-auto">RodStore</span>
         </a>
         <button
           className="navbar-toggler"
@@ -34,14 +44,17 @@ const NavBar = () => {
                 aria-current="page"
                 href="#"
               >
-                Inicio
+                Home
               </a>
             </li>
-            <li className="nav-item">
-              <a className="nav-link text-light" href="#">
-                Productos
-              </a>
-            </li>
+
+            {categories.map((category, index) => (
+              <li className="nav-item" key={index}>
+                <a className="nav-link text-light text-capitalize">
+                  {category}
+                </a>
+              </li>
+            ))}
           </ul>
 
           <CartWidget />
