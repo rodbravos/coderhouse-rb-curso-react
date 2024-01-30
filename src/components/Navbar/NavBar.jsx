@@ -2,6 +2,7 @@ import Logo from "../../assets/logo.svg";
 import { getCategoriesAsync } from "../../utils/MockData";
 import CartWidget from "../CartWidget/CartWidget";
 import { useEffect, useState } from "react";
+import { Link, NavLink } from "react-router-dom";
 
 const NavBar = () => {
   const [categories, setCategories] = useState([]);
@@ -15,7 +16,7 @@ const NavBar = () => {
   return (
     <nav className="navbar navbar-expand-lg bg-dark sticky-top py-3">
       <div className="container">
-        <a className="navbar-brand d-flex justify-content-start" href="#">
+        <NavLink className="navbar-brand d-flex justify-content-start" to="/">
           <img
             className="d-inline-block align-text-top"
             src={Logo}
@@ -23,7 +24,7 @@ const NavBar = () => {
             width="40"
           />
           <span className="text-light fw-bold my-auto">RodStore</span>
-        </a>
+        </NavLink>
         <button
           className="navbar-toggler"
           type="button"
@@ -39,20 +40,19 @@ const NavBar = () => {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <a
-                className="nav-link text-light active"
-                aria-current="page"
-                href="#"
-              >
-                Home
-              </a>
+              <NavLink to="/products" className="nav-link text-light" href="#">
+                All products
+              </NavLink>
             </li>
 
             {categories.map((category, index) => (
               <li className="nav-item" key={index}>
-                <a className="nav-link text-light text-capitalize">
+                <NavLink
+                  to={`/products/${category}`}
+                  className="nav-link text-light text-capitalize"
+                >
                   {category}
-                </a>
+                </NavLink>
               </li>
             ))}
           </ul>

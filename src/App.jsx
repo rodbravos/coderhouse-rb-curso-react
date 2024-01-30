@@ -4,6 +4,8 @@ import Dashboard from "./components/Dashboard/Dashboard";
 import Footer from "./components/Footer/Footer";
 import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
 import Home from "./pages/Home/Home";
+import PageNotFound from "./components/PageNotFound/PageNotFound";
+import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
 
 function App() {
   // const [count, setCount] = useState(0);
@@ -15,14 +17,17 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/products" element={<ItemListContainer />} />
-            {/* <Home />
-            <div className="container-fluid">
-              <div className="container">
-                <ItemListContainer />
-              </div>
-            </div>
-            <Footer /> */}
+            <Route
+              path="/products/:categoryId"
+              element={<ItemListContainer />}
+            />
+            <Route
+              path="/product/:productId"
+              element={<ItemDetailContainer />}
+            />
+            <Route path="*" element={<PageNotFound />} />
           </Routes>
+          <Footer />
         </Dashboard>
       </BrowserRouter>
     </>
