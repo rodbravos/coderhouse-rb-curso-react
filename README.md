@@ -1,3 +1,3 @@
-# CODERHOUSE - Primera Entrega
+# CODERHOUSE - Segunda Entrega
 
-E-commerce sobre venta de películas
+E-commerce
