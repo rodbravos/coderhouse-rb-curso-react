@@ -6,30 +6,35 @@ import ItemListContainer from "./components/ItemListContainer/ItemListContainer"
 import Home from "./pages/Home/Home";
 import PageNotFound from "./components/PageNotFound/PageNotFound";
 import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
+import CarritoCompra from "./components/CarritoCompra/CarritoCompraContainer";
+import CartProvider from "./routing/context/CartContext";
 
 function App() {
   // const [count, setCount] = useState(0);
 
   return (
     <>
-      <BrowserRouter>
-        <Dashboard>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/products" element={<ItemListContainer />} />
-            <Route
-              path="/products/:categoryId"
-              element={<ItemListContainer />}
-            />
-            <Route
-              path="/product/:productId"
-              element={<ItemDetailContainer />}
-            />
-            <Route path="*" element={<PageNotFound />} />
-          </Routes>
-          <Footer />
-        </Dashboard>
-      </BrowserRouter>
+      <CartProvider>
+        <BrowserRouter>
+          <Dashboard>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/products" element={<ItemListContainer />} />
+              <Route
+                path="/products/:categoryId"
+                element={<ItemListContainer />}
+              />
+              <Route
+                path="/product/:productId"
+                element={<ItemDetailContainer />}
+              />
+              <Route path="*" element={<PageNotFound />} />
+              <Route path="/checkout" element={<CarritoCompra />} />
+            </Routes>
+            <Footer />
+          </Dashboard>
+        </BrowserRouter>
+      </CartProvider>
     </>
   );
 }

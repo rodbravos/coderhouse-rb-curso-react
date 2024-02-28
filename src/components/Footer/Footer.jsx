@@ -15,7 +15,9 @@ const Footer = () => {
         <h5 className="text-center fw-bold text-light">
           RODRIGO BRAVO - CURSO REACT JS
         </h5>
-        <h6 className="text-center fw-bold text-light">SEGUNDA ENTREGA</h6>
+        <h6 className="text-center fw-bold text-light">
+          ENTREGA TRABAJO FINAL
+        </h6>
       </footer>
     </div>
   );

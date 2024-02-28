@@ -9,15 +9,15 @@ const ItemList = ({ itemList }) => {
         <div className="container">
           <div className="row">
             {itemList.map(
-              ({ id, title, category, price, count, image }, index) => {
+              ({ id, name, category, price, stock, image }, index) => {
                 return (
                   <Item
                     key={index}
                     id={id}
-                    title={title}
+                    name={name}
                     category={category}
                     price={price}
-                    count={count}
+                    stock={stock}
                     image={image}
                   />
                 );

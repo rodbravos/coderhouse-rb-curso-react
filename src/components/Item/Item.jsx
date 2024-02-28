@@ -2,18 +2,18 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Link, NavLink } from "react-router-dom";
 
-const Item = ({ id, title, category, price, count, image }) => {
+const Item = ({ id, name, category, price, image }) => {
   return (
     <div className="col-md-3">
       <div className="card my-2">
         <img
           src={image}
           className="card-img-top p-3 mx-auto"
-          alt={title}
+          alt={name}
           style={{ width: "60%" }}
         />
         <div className="card-body bg-light">
-          <h5 className="card-title fw-bold text-center">{title}</h5>
+          <h5 className="card-title fw-bold text-center">{name}</h5>
           <p className="badge text-bg-danger text-capitalize">{category}</p>
           <p className="text-muted">$ {price}</p>
         </div>
@@ -39,12 +39,6 @@ const Item = ({ id, title, category, price, count, image }) => {
   );
 };
 
-Item.propTypes = {
-  id: PropTypes.number,
-  title: PropTypes.string,
-  price: PropTypes.number,
-  image: PropTypes.string,
-  category: PropTypes.string,
-};
+Item.propTypes = {};
 
 export default Item;

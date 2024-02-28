@@ -1,14 +1,19 @@
 import Logo from "../../assets/logo.svg";
-import { getCategoriesAsync } from "../../utils/MockData";
+// import { getCategoriesAsync } from "../../utils/MockData";
 import CartWidget from "../CartWidget/CartWidget";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
+import { db } from "../../firebase/config";
+import { collection, getDocs } from "firebase/firestore/lite";
 
 const NavBar = () => {
   const [categories, setCategories] = useState([]);
 
   useEffect(() => {
-    getCategoriesAsync().then((categories) => {
+    const categoriesCollection = collection(db, "categories");
+
+    getDocs(categoriesCollection).then(({ docs }) => {
+      const categories = docs.map((doc) => ({ id: doc.id, ...doc.data() }));
       setCategories(categories);
     });
   }, []);
@@ -45,13 +50,13 @@ const NavBar = () => {
               </NavLink>
             </li>
 
-            {categories.map((category, index) => (
-              <li className="nav-item" key={index}>
+            {categories.map((category) => (
+              <li className="nav-item" key={category.id}>
                 <NavLink
-                  to={`/products/${category}`}
+                  to={`/products/${category.name}`}
                   className="nav-link text-light text-capitalize"
                 >
-                  {category}
+                  {category.name}
                 </NavLink>
               </li>
             ))}

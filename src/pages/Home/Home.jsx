@@ -1,15 +1,21 @@
 import React from "react";
-import Footer from "../../components/Footer/Footer";
+import { importMovies } from "../../firebase/importMovies";
+import { importCategories } from "../../firebase/importCategories";
 
-export const Home = () => {
+const Home = () => {
   return (
     <>
-      {/* <div className="container-fluid">
+      <div className="container-fluid">
         <div className="container">
-          <ItemListContainer />
+          <button className="btn btn-danger" onClick={importCategories}>
+            Import first time CATEGORIES
+          </button>
+          <span className="mx-3"></span>
+          <button className="btn btn-danger" onClick={importMovies}>
+            Import first time MOVIES
+          </button>
         </div>
       </div>
-      <Footer /> */}
     </>
   );
 };

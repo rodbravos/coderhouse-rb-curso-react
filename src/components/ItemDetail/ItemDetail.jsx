@@ -1,9 +1,12 @@
 import ItemCount from "../ItemCount/ItemCount";
+import { useCartContext } from "../../routing/context/CartContext";
 
 const ItemDetail = ({ item }) => {
-  const { id, title, description, category, price, image } = item;
+  const { name, description, category, price, image } = item;
+  const { addItem } = useCartContext();
   const onAdd = (count) => {
     console.log(`Agregaste ${count} items al carrito`);
+    addItem(item, count);
   };
 
   return (
@@ -15,7 +18,7 @@ const ItemDetail = ({ item }) => {
               <img
                 className="card-img-top mb-5 mb-md-0"
                 src={image}
-                alt={title}
+                alt={name}
                 style={{ maxWidth: "70%" }}
               />
             </div>
@@ -23,9 +26,9 @@ const ItemDetail = ({ item }) => {
               <div className="badge text-bg-danger rounded-pill fs-6 mb-1 text-capitalize">
                 {category}
               </div>
-              <h4 className="display-6 fw-bold">{title}</h4>
+              <h4 className="display-6 fw-bold">{name}</h4>
               <div className="fs-4 fw-bold mb-3">
-                <span>$ {price}</span>
+                <span>${price} CLP</span>
               </div>
               <p
                 className="lead py-3 lh-sm text-justify"
