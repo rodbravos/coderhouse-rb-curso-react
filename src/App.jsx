@@ -7,7 +7,7 @@ import Home from "./pages/Home/Home";
 import PageNotFound from "./components/PageNotFound/PageNotFound";
 import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
 import CarritoCompra from "./components/CarritoCompra/CarritoCompraContainer";
-import CartProvider from "./routing/context/cartContext";
+import CartProvider from "./routing/context/CartContext";
 
 function App() {
   // const [count, setCount] = useState(0);
