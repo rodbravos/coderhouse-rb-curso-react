@@ -8,7 +8,7 @@ import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailCont
 import PageNotFound from "./components/PageNotFound/PageNotFound";
 import CarritoCompra from "./components/CarritoCompra/CarritoCompraContainer";
 import CheckoutFormContainer from "./components/CheckoutForm/CheckoutFormContainer";
-import CartProvider from "./routing/context/CartContext";
+import CartProvider from "./routing/context/cartContext";
 
 function App() {
   return (
