@@ -1,9 +1,15 @@
 import React from "react";
 import { useCartContext } from "../../routing/context/CartContext";
 import { NavLink } from "react-router-dom";
+import TrashIcon from "../../assets/trash-icon.svg";
+import ShopingNextIcon from "../../assets/shoping-next.svg";
 
 const CarritoCompraContainer = () => {
-  const { cart, itemsTotal, total } = useCartContext();
+  const { cart, itemsTotal, total, clearCarrito } = useCartContext();
+
+  const handleVaciar = () => {
+    clearCarrito();
+  };
 
   return itemsTotal == 0 ? (
     <div className="container-fluid">
@@ -15,7 +21,7 @@ const CarritoCompraContainer = () => {
     <div className="container-fluid">
       <div className="container">
         <div className="row">
-          <div className="col-md-9">
+          <div className="col-md-8">
             <h2>Carrito de compra</h2>
             <p>
               Se realizará la compra de un total de{" "}
@@ -26,12 +32,30 @@ const CarritoCompraContainer = () => {
               .
             </p>
           </div>
-          <div className="col-md-3 my-auto text-end">
+          <div className="col-md-4 my-auto text-end">
+            <button
+              type="button"
+              className="btn btn-danger"
+              onClick={handleVaciar}
+            >
+              <img
+                src={TrashIcon}
+                alt="logo"
+                className="d-inline-block align-text-top"
+              />
+              &nbsp; Limpiar carrito
+            </button>
+            <span className="mx-1">&nbsp;</span>
             <NavLink
               className="text-decoration-none btn btn-danger"
               to="/checkoutForm"
             >
-              Finalizar compra
+              <img
+                src={ShopingNextIcon}
+                alt="logo"
+                className="d-inline-block align-text-top"
+              />
+              &nbsp; Finalizar compra
             </NavLink>
           </div>
         </div>
@@ -47,8 +71,8 @@ const CarritoCompraContainer = () => {
               </tr>
             </thead>
             <tbody className="table-group-divider">
-              {cart.map((item) => (
-                <tr key={item.item.id}>
+              {cart.map((item, index) => (
+                <tr key={`${item.item.id}-${index}`}>
                   <td className="text-center">{item.item.name}</td>
                   <td className="text-center">{item.quantity}</td>
                   <td className="text-center">

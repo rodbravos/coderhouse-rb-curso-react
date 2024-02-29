@@ -48,7 +48,7 @@ const CartProvider = ({ children }) => {
 
   const removeItem = (id) => {};
 
-  const clear = () => {
+  const clearCarrito = () => {
     setCart([]);
     setItemsTotal(0);
     setTotal(0);
@@ -62,7 +62,7 @@ const CartProvider = ({ children }) => {
     total,
     addItem,
     removeItem,
-    clear,
+    clearCarrito,
   };
   return <Provider value={valorDelContexto}>{children}</Provider>;
 };
