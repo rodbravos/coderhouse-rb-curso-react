@@ -44,7 +44,6 @@ const CartProvider = ({ children }) => {
 
     // Update the itemsTotal based on the new quantity
     setItemsTotal((prevItemsTotal) => prevItemsTotal + quantity);
-    // aca termina
   };
 
   const removeItem = (id) => {};
