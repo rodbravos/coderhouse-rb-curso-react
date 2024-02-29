@@ -1,32 +1,49 @@
 import React from "react";
 import { useCartContext } from "../../routing/context/CartContext";
+import { NavLink } from "react-router-dom";
 
 const CarritoCompraContainer = () => {
   const { cart, itemsTotal, total } = useCartContext();
 
-  return (
+  return itemsTotal == 0 ? (
     <div className="container-fluid">
       <div className="container">
-        <div className="mb-4">
-          <h2>Finalizar la compra</h2>
-          <p>
-            Se realizará la compra de un total de{" "}
-            <span className="fw-bold">
-              {itemsTotal} producto
-              {itemsTotal > 1 ? "s" : ""}
-            </span>
-            .
-          </p>
+        <h4>No hay productos seleccionados para la compra.</h4>
+      </div>
+    </div>
+  ) : (
+    <div className="container-fluid">
+      <div className="container">
+        <div className="row">
+          <div className="col-md-9">
+            <h2>Carrito de compra</h2>
+            <p>
+              Se realizará la compra de un total de{" "}
+              <span className="fw-bold">
+                {itemsTotal} producto
+                {itemsTotal > 1 ? "s" : ""}
+              </span>
+              .
+            </p>
+          </div>
+          <div className="col-md-3 my-auto text-end">
+            <NavLink
+              className="text-decoration-none btn btn-danger"
+              to="/checkoutForm"
+            >
+              Finalizar compra
+            </NavLink>
+          </div>
         </div>
 
-        <div className="table-responsive my-5">
+        <div className="table-responsive my-3">
           <table className="table table-hover">
             <thead className="text-center bg-success">
               <tr>
-                <th className="bg-danger text-light">Nombre Película</th>
+                <th className="bg-danger text-light">Película</th>
                 <th className="bg-danger text-light">Cantidad</th>
                 <th className="bg-danger text-light">Precio unitario</th>
-                <th className="bg-danger text-light">Total por producto</th>
+                <th className="bg-danger text-light">Total</th>
               </tr>
             </thead>
             <tbody className="table-group-divider">

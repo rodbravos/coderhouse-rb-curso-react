@@ -12,22 +12,6 @@ const CartProvider = ({ children }) => {
   const [total, setTotal] = useState(0);
 
   const addItem = (item, quantity) => {
-    // setItemsTotal(itemsTotal + quantity);
-    // setTotal(total + item.price * quantity);
-
-    // if (isInCart(item.id)) {
-    //   const newCart = cart.map((cartItem) => {
-    //     if (cartItem.item.id === item.id) {
-    //       return { ...cartItem, quantity: cartItem.quantity + quantity };
-    //     } else {
-    //       return cartItem;
-    //     }
-    //   });
-    //   setCart(newCart);
-    // } else {
-    //   setCart([...cart, { item, quantity }]);
-    // }
-
     const existingItemIndex = cart.findIndex(
       (cartItem) => cartItem.item.id === String(item.id)
     );
