@@ -17,7 +17,6 @@ const CheckoutFormContainer = () => {
       total: total,
       itemsTotal: itemsTotal,
     };
-    console.log(pedido);
 
     const pedidosRef = collection(db, "orders");
     addDoc(pedidosRef, pedido).then((doc) => {

@@ -1,5 +1,4 @@
 import Logo from "../../assets/logo.svg";
-// import { getCategoriesAsync } from "../../utils/MockData";
 import CartWidget from "../CartWidget/CartWidget";
 import { useContext, useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
