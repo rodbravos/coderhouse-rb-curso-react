@@ -18,7 +18,7 @@ const NavBar = () => {
   }, []);
 
   return (
-    <nav className="navbar navbar-expand-lg bg-dark sticky-top py-3">
+    <nav className="navbar navbar-expand-lg bg-dark navbar-dark sticky-top py-3">
       <div className="container">
         <NavLink className="navbar-brand d-flex justify-content-start" to="/">
           <img

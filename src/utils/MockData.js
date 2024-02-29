@@ -296,20 +296,3 @@ export const movies = [
       "https://m.media-amazon.com/images/M/MV5BOGZhM2FhNTItODAzNi00YjA0LWEyN2UtNjJlYWQzYzU1MDg5L2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_FMjpg_UX1007_.jpg",
   },
 ];
-
-// export const getProductsAsync = () => {
-//   // return fetch("https://api.escuelajs.co/api/v1/products").then((res) =>
-//   return fetch("https://fakestoreapi.com/products").then((res) => res.json());
-// };
-
-// export const getProductsAsyncById = (id) => {
-//   return fetch(`https://fakestoreapi.com/products/${id}`).then((res) =>
-//     res.json()
-//   );
-// };
-
-// export const getCategoriesAsync = () => {
-//   return fetch("https://fakestoreapi.com/products/categories").then((res) =>
-//     res.json()
-//   );
-// };

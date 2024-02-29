@@ -4,7 +4,7 @@ import { Link, NavLink } from "react-router-dom";
 
 const Item = ({ id, name, category, price, image }) => {
   return (
-    <div className="col-md-3">
+    <div className="col-md-3 col-sm-4">
       <div className="card my-2">
         <img
           src={image}

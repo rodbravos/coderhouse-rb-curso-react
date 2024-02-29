@@ -26,9 +26,6 @@ const ItemListContainer = ({}) => {
       });
     } else {
       getDocs(moviesCollection).then(({ docs }) => {
-        // console.log("docs no filtered by category");
-        // console.log(docs);
-
         const products = docs.map((doc) => ({
           id: doc.id,
           ...doc.data(),
@@ -37,18 +34,6 @@ const ItemListContainer = ({}) => {
         setLoading(false);
       });
     }
-
-    // getProductsAsync().then((products) => {
-    //   if (categoryId) {
-    //     const filteredProducts = products.filter(
-    //       (product) => product.category === categoryId
-    //     );
-    //     setItems(filteredProducts);
-    //   } else {
-    //     setItems(products);
-    //   }
-    //   setLoading(false);
-    // });
   }, [categoryId]);
 
   return loading ? <Spinner /> : <ItemList itemList={items} />;

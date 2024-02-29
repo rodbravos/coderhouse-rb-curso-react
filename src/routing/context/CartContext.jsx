@@ -54,8 +54,6 @@ const CartProvider = ({ children }) => {
     setTotal(0);
   };
 
-  // const isInCart = (id) => cart.find((item) => item.item.id === id);
-
   const valorDelContexto = {
     cart,
     itemsTotal,

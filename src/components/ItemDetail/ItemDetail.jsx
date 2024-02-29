@@ -5,7 +5,6 @@ const ItemDetail = ({ item }) => {
   const { name, description, category, price, image } = item;
   const { addItem } = useCartContext();
   const onAdd = (count) => {
-    // console.log(`Agregaste ${count} items al carrito`);
     addItem(item, count);
   };
 

@@ -24,12 +24,6 @@ const ItemDetailContainer = () => {
       .catch((error) => {
         console.log("Error getting movie data: ", error);
       });
-    // setLoading(false);
-
-    // getProductsAsyncById(productId).then((product) => {
-    //   setItem(product);
-    //   setLoading(false);
-    // });
   }, [productId]);
 
   return loading ? <Spinner /> : <ItemDetail item={item} />;
