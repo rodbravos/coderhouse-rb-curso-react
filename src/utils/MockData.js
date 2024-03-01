@@ -295,4 +295,136 @@ export const movies = [
     image:
       "https://m.media-amazon.com/images/M/MV5BOGZhM2FhNTItODAzNi00YjA0LWEyN2UtNjJlYWQzYzU1MDg5L2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_FMjpg_UX1007_.jpg",
   },
+  {
+    id_prod: 25,
+    name: "El Señor de los Anillos: La Comunidad del Anillo",
+    duration: 178,
+    category: "Ciencia Ficción",
+    price: 8500,
+    description:
+      "Un hobbit llamado Frodo emprende un viaje para destruir un poderoso anillo y evitar que caiga en manos de Sauron.",
+    stock: 34,
+    image:
+      "https://m.media-amazon.com/images/M/MV5BMzgyNjdjOWMtMjAyYy00NzQ4LWIwYTQtZDk2ZDQzYWVlN2IwXkEyXkFqcGdeQXVyMTYzMDM0NTU@._V1_FMjpg_UX720_.jpg",
+  },
+  {
+    id_prod: 26,
+    name: "Coco",
+    duration: 105,
+    category: "Animación",
+    price: 6900,
+    description:
+      "Un niño mexicano llamado Miguel se embarca en un viaje en el Día de los Muertos para descubrir la verdad sobre su familia.",
+    stock: 43,
+    image:
+      "https://m.media-amazon.com/images/M/MV5BNTJlNDgzNDMtNjAyZC00ODNhLTgwNDktODk5ZWZmMjBiODY1XkEyXkFqcGdeQXVyMTYzMDM0NTU@._V1_FMjpg_UX500_.jpg",
+  },
+  {
+    id_prod: 27,
+    name: "El Lobo de Wall Street",
+    duration: 180,
+    category: "Drama",
+    price: 7900,
+    description:
+      "La historia real de Jordan Belfort, desde su ascenso como corredor de bolsa hasta su caída debido a la corrupción y el fraude.",
+    stock: 58,
+    image:
+      "https://m.media-amazon.com/images/M/MV5BYTIzN2ZlMWEtYmRmMi00YWRlLThkZWYtMjZjNTliMWU4NGJkXkEyXkFqcGdeQXVyMTYzMDM0NTU@._V1_FMjpg_UY5000_.jpg",
+  },
+  {
+    id_prod: 28,
+    name: "Volver al Futuro",
+    duration: 116,
+    category: "Ciencia Ficción",
+    price: 7200,
+    description:
+      "Un adolescente viaja en el tiempo a través de un DeLorean modificado con la ayuda de un científico excéntrico.",
+    stock: 99,
+    image:
+      "https://m.media-amazon.com/images/M/MV5BYjQxMTIyMWUtMmMyMS00MGNmLTkzNzktOTM2YzMyZmRjYTYzXkEyXkFqcGdeQXVyMTYzMDM0NTU@._V1_FMjpg_UY2000_.jpg",
+  },
+  {
+    id_prod: 29,
+    name: "Misión Imposible: Nación Secreta",
+    duration: 131,
+    category: "Acción",
+    price: 7400,
+    description:
+      "Ethan Hunt y su equipo se enfrentan a su misión más imposible hasta ahora, desmantelar una organización secreta internacional.",
+    stock: 11,
+    image:
+      "https://m.media-amazon.com/images/M/MV5BYzA0ZGVhMmMtZDI5Ny00YWJjLTk3NWEtOWUyMTg2OTQxNDEzXkEyXkFqcGdeQXVyMTAzMDM4MjM0._V1_FMjpg_UX614_.jpg",
+  },
+  {
+    id_prod: 30,
+    name: "El Discurso del Rey",
+    duration: 118,
+    category: "Drama",
+    price: 6700,
+    description:
+      "La historia real del rey Jorge VI del Reino Unido, su inesperado ascenso al trono y su lucha por superar su tartamudez.",
+    stock: 94,
+    image:
+      "https://m.media-amazon.com/images/M/MV5BYTBjNjM5YWItMGY5Yi00YjA4LTk1OTMtMmE3ZDkwYTA0OWFiXkEyXkFqcGdeQXVyMTYzMDM0NTU@._V1_FMjpg_UX1060_.jpg",
+  },
+  {
+    id_prod: 30,
+    name: "Supercool",
+    duration: 107,
+    category: "Comedia",
+    price: 5900,
+    description:
+      "Dos estudiantes de secundaria intentan hacer una última fiesta legendaria antes de graduarse.",
+    stock: 33,
+    image:
+      "https://m.media-amazon.com/images/M/MV5BMGNlYjJmODAtNDRkOC00N2U0LTg0MWItZjlkYzgxMWFjNDY1XkEyXkFqcGdeQXVyMTIxMzMzMzE@._V1_FMjpg_UX800_.jpg",
+  },
+  {
+    id_prod: 31,
+    name: "Loco por Mary",
+    duration: 119,
+    category: "Comedia",
+    price: 6300,
+    description:
+      "Un hombre intenta volver a conectar con su amor de la escuela secundaria, pero se encuentra en una serie de situaciones cómicas.",
+    stock: 69,
+    image:
+      "https://m.media-amazon.com/images/M/MV5BNGU5ZTdjMmQtZjFhZS00NDg1LWI1N2EtZDM4YWMwMzc4OTJjXkEyXkFqcGdeQXVyODc0OTEyNDU@._V1_FMjpg_UX600_.jpg",
+  },
+  {
+    id_prod: 32,
+    name: "Súper Agente 86",
+    duration: 110,
+    category: "Comedia",
+    price: 6800,
+    description:
+      "Un torpe agente secreto se embarca en una misión para detener a una organización criminal.",
+    stock: 85,
+    image:
+      "https://m.media-amazon.com/images/M/MV5BZmVhN2FmN2ItNTE3MS00MzllLTk5ZjYtOWVhNjhiNzk4OTI0XkEyXkFqcGdeQXVyODIyOTEyMzY@._V1_FMjpg_UX768_.jpg",
+  },
+  {
+    id_prod: 33,
+    name: "La Máscara",
+    duration: 101,
+    category: "Comedia",
+    price: 4300,
+    description:
+      "Un empleado de banco encuentra una máscara que lo transforma en un bromista verde con habilidades sobrenaturales.",
+    stock: 44,
+    image:
+      "https://m.media-amazon.com/images/M/MV5BOWZjZDY1YWUtZWRiZi00ODY0LTkwMmMtZDYxMDMzN2JmNjQ5XkEyXkFqcGdeQXVyMTYzMDM0NTU@._V1_FMjpg_UX1017_.jpg",
+  },
+  {
+    id_prod: 34,
+    name: "Duro de matar",
+    duration: 132,
+    category: "Acción",
+    price: 8300,
+    description:
+      "Un policía de Nueva York se enfrenta a un grupo de terroristas que toman como rehenes a su esposa y otros invitados en una fiesta navideña.",
+    stock: 59,
+    image:
+      "https://m.media-amazon.com/images/M/MV5BZDljZGUyNDQtOWMwOC00ZGJlLTgzZGEtNjZhYTM5ODJlYjBmXkEyXkFqcGdeQXVyMTYzMDM0NTU@._V1_FMjpg_UY2300_.jpg",
+  },
 ];
